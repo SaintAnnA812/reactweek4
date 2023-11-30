@@ -38,16 +38,12 @@ const int = [
 ];
 
 function App() {
-  const [selected, setSelected] = useState(false);
 
-  function isSelected() {
-    setSelected(!selected)
-  }
 
   return (
     <>
-      <div className='container' onClick={isSelected} >
-        {int.map((item, index) => (<Card {...item} selected={selected} key={index} />
+      <div className='container'>
+        {int.map((item, index) => (<Card {...item} key={index} />
         ))}
 
 
